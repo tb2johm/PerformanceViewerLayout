@@ -1,0 +1,27 @@
+﻿<Window x:Class="PerformanceViewerLayout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:perf="clr-namespace:PerformanceViewerLayout"
+        xmlns:performancePresenter="clr-namespace:PerformanceViewerLayout.PerformancePresenter"
+        Title="MainWindow" Height="306" Width="525">
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" SelectedIndex="0">
+            <ComboBox.Items>
+                <TextBlock>[All users]</TextBlock>
+                <TextBlock>Arivd</TextBlock>
+                <TextBlock>Jenny</TextBlock>
+                <TextBlock>Markus</TextBlock>
+            </ComboBox.Items>
+        </ComboBox>
+        
+        <DatePicker Text="From" Margin="248,10,142,286" RenderTransformOrigin="1.929,-1.692"></DatePicker>
+        <DatePicker Text="" Margin="380,10,10,286" RenderTransformOrigin="1.929,-1.692"></DatePicker>
+        
+        <ScrollViewer Margin="0,39,0,0">
+            <StackPanel>
+                <performancePresenter:PerformancePresenter/>
+                <performancePresenter:PerformancePresenter/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
